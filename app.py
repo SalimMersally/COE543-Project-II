@@ -1,6 +1,9 @@
+import time
+import xml.etree.ElementTree as ET
 from flask import Flask, render_template, request, Response
 from functions.Vectors import *
 from functions.SimilarityVSM import *
+from functions.TreeEditDistance import *
 
 app = Flask(__name__)
 
@@ -12,13 +15,22 @@ XMLpaths = [
 ]
 
 vectors = getAllVectors(XMLpaths)
+
+roots = []
+for path in XMLpaths:
+    tree = ET.parse(path)
+    root = tree.getroot()
+    roots.append(root)
+
 queryResult = []
 
 
 @app.route("/", methods=("GET", "POST"))
 def main():
     if request.method == "POST":
+        timeBefore = time.time()
         queryVector = {}
+        queryResult = []
 
         if request.form["queryType"] == "text":
             queryVector = getTextQueryVector(request.form["query"])
@@ -27,14 +39,23 @@ def main():
             root = tree.getroot()
             getVectorWithTF(root, "", queryVector)
 
-        queryResult = getAllSimVSM(queryVector, vectors, XMLpaths)
+        if request.form["simType"] == "VSM":
+            queryResult = getAllSimVSM(queryVector, vectors, XMLpaths)
+        else:
+            tree = ET.ElementTree(ET.fromstring(request.form["query"]))
+            root = tree.getroot()
+            queryResult = getAllSimTED(root, roots, XMLpaths)
+
+        timeAfter = time.time()
 
         print("Query Vector")
         pprint(queryVector)
         print("Query result")
         pprint(queryResult)
 
-        return render_template("result.html", queryResult=queryResult)
+        timeTaken = round(timeAfter - timeBefore, 4)
+
+        return render_template("result.html", queryResult=queryResult, time=timeTaken)
 
     print(request)
     return render_template("index.html")
