@@ -4,7 +4,9 @@
 # DF(ti,D) is the number of indexing node elements in D containing ti
 # t term and D document 
 # C document collection
-from itertools import count
+from math import *
+import math
+from pprint import pprint
 import xml.etree.ElementTree as ET
 # NEED TO 
 def TF(listOfDoc) :
@@ -22,14 +24,38 @@ def TF(listOfDoc) :
             #         frq = frq + 1
             # dic[tuple] = frq
         list.append(dic)
-
     return list
 
-def DF() :
+def DF(list) :
+    newList = []
+    for doc in list:
+        newDic = {}
+        for tuple in doc:
+            frq = 0
+            for doc2 in list:
+                if tuple in doc2 :
+                    frq = frq + 1
+                    newDic[tuple] = frq
+        newList.append(newDic)
+    return newList 
 
-    return
+def IDF(listFreq, listInvFreq) :
+    finalList = []
+    i = 0
+    for doc in listFreq:
+        
+        dic = {}
+        for tuple in doc:
+            
+            dic[tuple] = doc.get(tuple) * math.log((len(listFreq)) / (listInvFreq[i].get(tuple)))
+        i = i+1
+        pprint(dic)
+        finalList.append(dic)
+
+    return finalList
 
 
+# No need for them now
 # def Tf(name , pathArr,root, c, counter) :
 #     #print(root.tag)
 #     #print(root.text)

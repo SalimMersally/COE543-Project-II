@@ -1,8 +1,9 @@
 import imp
 from itertools import count
 from pprint import *
+from math import *
 import xml.etree.ElementTree as ET
-from weighting import TF
+from weighting import *
 #from preprocess import *
 
 xmldoc = "Helper/doc1.xml"
@@ -25,7 +26,7 @@ arr = [[('LAU', '/university'),
   ('Sabsabi', '/university/faculty/department/student'),
   ('Lamis', '/university/faculty/laboratory/student'),
   ('Armoush', '/university/faculty/laboratory/student')],
- [('LAU', '/university'),('Lebanese', '/university/name'),      # wa2et nkarer echya bi 2 doc ma 3am te5da 
+ [('LAU', '/university'),('Lebanese', '/university/name'),      
   ('American', '/university/name'),
   ('University', '/university/name'),
   ('LAU', '/university/shortName'),
@@ -126,11 +127,26 @@ arr = [[('LAU', '/university'),
   ('Maximus', '/universities/university/faculty/laboratory/student'),
   ('1345', '/universities/university/faculty/laboratory/student/id/@')]]
 
-dic = TF(arr)
-pprint(dic)
-print(dic.get( ('Fawaz', '/universities/university/faculty/department/professor')))
-if ('Fawaz', '/universities/university/faculty/department/professor') in dic :
-    print("true")
+listdicFr = TF(arr)
+#pprint(listdicFr)
+#print("------------------------------------------------------------------------------------------------")
+newListDicIF = DF(listdicFr)
+#pprint(newListDicIF)
+#print("------------------------------------------------------------------------------------------------") 
+#print("type : " + str(type(newListDicIF[0].get(('Ahmad', '/university/faculty/department/student')))))
+finalList = IDF(listdicFr,newListDicIF)
+pprint(finalList)
+
+
+
+
+
+# pprint(listdicFr)
+# print("===================================================================================")
+# pprint(newListDicIF)
+# print(dic.get( ('Fawaz', '/universities/university/faculty/department/professor')))
+# if ('Fawaz', '/universities/university/faculty/department/professor') in dic :
+#     print("true")
 # # print("s")
 # # root = tree.getroot()
 # # childr = root[0]
