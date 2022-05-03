@@ -1,0 +1,67 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.google {
+    margin: 20px;
+}
+
+form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#search-bar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+    border-radius: 50px;
+    height: 40px;
+    border: 1px solid #dddddd;
+    outline: none;
+    padding: 0px 40px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 3px rgb(192, 185, 185);
+}
+
+.button {
+    padding: 10px 20px 10px 20px;
+    border-radius: 4px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+    padding: 10px;
+}
+
+.space {
+    height: 100px;
+}
+
+.buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio {
+    margin: 5px;
+}

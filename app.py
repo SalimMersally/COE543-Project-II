@@ -18,7 +18,15 @@ queryResult = []
 @app.route("/", methods=("GET", "POST"))
 def main():
     if request.method == "POST":
-        queryVector = getTextQueryVector(request.form["query"])
+        queryVector = {}
+
+        if request.form["queryType"] == "text":
+            queryVector = getTextQueryVector(request.form["query"])
+        else:
+            tree = ET.ElementTree(ET.fromstring(request.form["query"]))
+            root = tree.getroot()
+            getVectorWithTF(root, "", queryVector)
+
         queryResult = getAllSimVSM(queryVector, vectors, XMLpaths)
 
         print("Query Vector")
@@ -27,6 +35,7 @@ def main():
         pprint(queryResult)
 
         return render_template("result.html", queryResult=queryResult)
+
     print(request)
     return render_template("index.html")
 

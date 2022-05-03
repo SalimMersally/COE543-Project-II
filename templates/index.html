@@ -4,20 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
     <title>Search Engine</title>
   </head>
   <body>
-    <h1>Hi {{name}}</h1>
+    <div class="google">
+      <img src="{{url_for('static', filename='google.png')}}" />
+    </div>
     <form method="post">
-      <label for="query">Query</label>
-      <input type="text" name="query" />
+      <div class="container">
+        <input id="search-bar" type="text" name="query" />
+      </div>
 
-      <input type="radio" name="simType" value="VSM" />
-      <label for="VSM">VSM</label>
-      <input type="radio" name="simType" value="TED" />
-      <label for="TED">TED</label>
-
-      <input type="submit" />
+      <div class="buttons">
+        <div class="radio">
+          <input type="radio" name="simType" value="VSM" checked />
+          <label for="VSM">VSM</label>
+          <input type="radio" name="simType" value="TED" />
+          <label for="TED">TED</label>
+        </div>
+        <div>
+          <input type="radio" name="queryType" value="text" checked />
+          <label for="text">text</label>
+          <input type="radio" name="queryType" value="xml" />
+          <label for="xml">xml</label>
+        </div>
+        <input class="button" type="submit" value="search" />
+      </div>
+      <div class="space"></div>
     </form>
   </body>
 </html>
