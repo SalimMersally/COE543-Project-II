@@ -1,6 +1,7 @@
 from Vectors import getAllVectors
 from pprint import pprint
 
+
 def getIndexingTable(arrDics,XMLpaths):
     out={}
     i = 0
@@ -16,14 +17,15 @@ def getIndexingTable(arrDics,XMLpaths):
         
     return out
 
+
 XMLpaths = [
     "XMLdocuments/doc1.xml",
     "XMLdocuments/doc2.xml",
     "XMLdocuments/doc3.xml",
     "XMLdocuments/doc4.xml",
 ]
+
 list = getAllVectors(XMLpaths)
 dic =  getIndexingTable(list,XMLpaths)
-pprint(dic)
 
-           
+pprint(dic)
