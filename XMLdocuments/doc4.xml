@@ -1,32 +1,32 @@
 <universities>
-<university >
-	LAU
-	<faculty>
-		<department>
-			ECE
-			<professor>Joe Tekli</professor>
-			<professor>Wissam Fawaz</professor>
-			<student id = "2222"> Salim Al Mersally</student>
-			<student id="4444">Ahmad Al Sayed Al Sabsabi</student>
-		</department>
-		<laboratory>
-			<student id="5959">Lamis Armoush</student>
-		</laboratory>
-	</faculty>
-</university>
-<university >
-	AUB
-	<faculty>
-		<department>
-			ECE
-			<professor>Joe Tekli</professor>
-			<professor>Wissam Fawaz</professor>
-			<student id = "1234">Aman Masri</student>
-			<student id="4567">Lea Trobat</student>
-		</department>
-		<laboratory>
-			<student id="1345">Caylob Maximus</student>
-		</laboratory>
-	</faculty>
-</university>
+	<university>
+		LAU
+		<faculty>
+			<department>
+				ECE
+				<professor>Joe Tekli</professor>
+				<professor>Wissam Fawaz</professor>
+				<student id="2222"> Salim Al Mersally</student>
+				<student id="4444">Ahmad Al Sayed Al Sabsabi</student>
+			</department>
+			<laboratory>
+				<student id="5959">Lamis Armoush</student>
+			</laboratory>
+		</faculty>
+	</university>
+	<university>
+		AUB
+		<faculty>
+			<department>
+				ECE
+				<professor>Joe Tekli</professor>
+				<professor>Wissam Fawaz</professor>
+				<student id="1234">Aman Masri</student>
+				<student id="4567">Lea Trobat</student>
+			</department>
+			<laboratory>
+				<student id="1345">Caylob Maximus</student>
+			</laboratory>
+		</faculty>
+	</university>
 </universities>

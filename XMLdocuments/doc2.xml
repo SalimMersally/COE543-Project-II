@@ -1,7 +1,7 @@
 <university>
 	<name>Lebanese American University</name>
 	<shortName>LAU</shortName>
-	<description>
+	<description info="A small description">
 		LAU is an American university located
 		in Lebanon. It is one of the leading
 		American universities in Lebanon.
@@ -9,6 +9,6 @@
 	<students>
 		<student>Salim Al Mersally</student>
 		<student>Ahmad Al Sayed Al Sabsabi</student>
-		<student >Lamis Armoush</student>
+		<student>Lamis Armoush</student>
 	</students>
 </university>

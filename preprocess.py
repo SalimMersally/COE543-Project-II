@@ -1,72 +1,54 @@
 import xml.etree.ElementTree as ET
 import string
+from pprint import pprint
 
-def preprocess(root,path,dic):
-    
-    attdic = root.attrib        
-    wordlist = root.text.translate(str.maketrans(' ', ' ', string.punctuation)).split()
-    path = path+ "/" + root.tag  
-    
-    for word in wordlist:
-        tuple = (word, path)
-        available = False
-        for key in dic:
-            if (tuple == key):
-                available = True
-        if(available):
-            dic[tuple] = dic[tuple]+1
-        else:
-            dic[tuple]=1
 
-    for att in attdic:
-        attpath = path + "/" + att+ "/@"
-        value = attdic [att]
-        tuple = (value, attpath)
-        available=False
-        
-        for key in dic:
-            if (tuple == key):
-                available = True
-        if(available):
-            dic[tuple] = dic[tuple]+1
-        else:
-            dic[tuple]=1
-                
-    for child in root: 
-        preprocess(child, path, dic)
+def getPaths(root, path, list):
 
-def getPaths(root,path,list):
-    
-    attdic = root.attrib        
-    wordlist = root.text.translate(str.maketrans(' ', ' ', string.punctuation)).split()
-    path = path+ "/" + root.tag  
-    
-    for word in wordlist:
-        tuple = (word, path)
-        list.append(tuple)
+    path = path + "/" + root.tag
+    attributeDict = root.attrib
 
-    for att in attdic:
-        attpath = path + "/" + att+ "/@"
-        value = attdic [att]
-        tuple = (value, attpath)
-        list.append(tuple)
-        
-               
-    for child in root: 
-       getPaths(child, path, list)
+    if root.text:
+        wordlist = root.text.translate(
+            str.maketrans(" ", " ", string.punctuation)
+        ).split()
 
-def getAllTerms(docarr,list):
-    for xmlfile in docarr:
+        for word in wordlist:
+            tuple = (word, path)
+            list.append(tuple)
+
+    for att in attributeDict:
+        attributePath = path + "/" + att + "/@"
+        wordlist = (
+            attributeDict[att]
+            .translate(str.maketrans(" ", " ", string.punctuation))
+            .split()
+        )
+        for word in wordlist:
+            tuple = (word, attributePath)
+            list.append(tuple)
+
+    for child in root:
+        getPaths(child, path, list)
+
+
+def getAllTerms(XMLpaths):
+    list = []
+    for xmlfile in XMLpaths:
         tree = ET.parse(xmlfile)
-        root = tree.getroot() 
-        path= ""
+        root = tree.getroot()
         pathlist = []
-        getPaths(root,path,pathlist)
+        getPaths(root, "", pathlist)
         list.append(pathlist)
-    
-        
-docarr =[ "XMLdocuments/doc2.xml", "XMLdocuments/doc1.xml" ]
-list=[]
-getAllTerms(docarr,list)
-    
-print(list)
+    return list
+
+
+XMLpaths = [
+    "XMLdocuments/doc1.xml",
+    "XMLdocuments/doc2.xml",
+    "XMLdocuments/doc3.xml",
+    "XMLdocuments/doc4.xml",
+]
+list = getAllTerms(XMLpaths)
+
+pprint(list)
