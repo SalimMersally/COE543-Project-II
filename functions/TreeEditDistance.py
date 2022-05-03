@@ -53,7 +53,7 @@ def getAllSimTED(queryRoot, documentsRoot, XMLPaths):
     for root in documentsRoot:
         distance = NJ(queryRoot, root, "Q", "D", {})
         sim = 1 - distance / (nodeCounter(queryRoot) + nodeCounter(root))
-        sim = round(sim, 3)
+        sim = round(sim, 4)
         simList.append((XMLPaths[i], sim))
         i = i + 1
 

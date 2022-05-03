@@ -1,31 +1,34 @@
-from Vectors import getAllVectors
+from functions.Vectors import getAllVectors
 from pprint import pprint
 
 
-def getIndexingTable(arrDics,XMLpaths):
-    out={}
-    i = 0
-    for dic in arrDics:
-        for key in dic:
-            term = key [0] 
-            if (term in out.keys()):
-                if(XMLpaths[i] not in out[term]):
-                    out[term]= out[term] + (XMLpaths[i],)    
+def getIndexingTable(listOfVectors):
+    out = {}
+    for path in listOfVectors:
+        vector = listOfVectors[path]
+        for dimension in vector:
+            term = dimension[0]
+            if term in out.keys():
+                if path not in out[term]:
+                    out[term].append(path)
             else:
-                out[term] = (XMLpaths[i],)
-        i +=1;
-        
+                out[term] = [path]
+    print("Indexing Table")
+    pprint(out)
     return out
 
 
-XMLpaths = [
-    "XMLdocuments/doc1.xml",
-    "XMLdocuments/doc2.xml",
-    "XMLdocuments/doc3.xml",
-    "XMLdocuments/doc4.xml",
-]
+def getDocumentFromIndex(indexTable, queryVector, oldVectorList):
+    newVectorList = {}
 
-list = getAllVectors(XMLpaths)
-dic =  getIndexingTable(list,XMLpaths)
+    for dimenion in queryVector:
+        term = dimenion[0]
+        if term in indexTable:
+            docPaths = indexTable[term]
+            for path in docPaths:
+                if path not in newVectorList:
+                    newVectorList[path] = oldVectorList[path]
 
-pprint(dic)
+    print("Document to query from indexing table")
+    pprint(newVectorList)
+    return newVectorList

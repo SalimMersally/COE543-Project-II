@@ -4,6 +4,7 @@ from flask import Flask, render_template, request, Response
 from functions.Vectors import *
 from functions.SimilarityVSM import *
 from functions.TreeEditDistance import *
+from functions.indexing import *
 
 app = Flask(__name__)
 
@@ -15,6 +16,8 @@ XMLpaths = [
 ]
 
 vectors = getAllVectors(XMLpaths)
+indexTable = getIndexingTable(vectors)
+
 
 roots = []
 for path in XMLpaths:
@@ -40,7 +43,8 @@ def main():
             getVectorWithTF(root, "", queryVector)
 
         if request.form["simType"] == "VSM":
-            queryResult = getAllSimVSM(queryVector, vectors, XMLpaths)
+            newVectorList = getDocumentFromIndex(indexTable, queryVector, vectors)
+            queryResult = getAllSimVSM(queryVector, newVectorList)
         else:
             tree = ET.ElementTree(ET.fromstring(request.form["query"]))
             root = tree.getroot()

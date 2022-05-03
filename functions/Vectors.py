@@ -63,7 +63,8 @@ def getTextQueryVector(text):
 # the list of vectors contains only TF at this stage
 def DF(dimension, listOfVectors):
     DF = 0
-    for vector in listOfVectors:
+    for path in listOfVectors:
+        vector = listOfVectors[path]
         if dimension in vector:
             DF = DF + 1
     return DF
@@ -73,7 +74,8 @@ def DF(dimension, listOfVectors):
 # and will add IDF to the weight
 # this method will use the DF method
 def IDF(listOfVectors):
-    for vector in listOfVectors:
+    for path in listOfVectors:
+        vector = listOfVectors[path]
         for dimension in vector:
             vector[dimension] = vector[dimension] * math.log(
                 len(listOfVectors) / DF(dimension, listOfVectors)
@@ -83,13 +85,13 @@ def IDF(listOfVectors):
 # the following method will go over all the XML documents, transform them into tree,
 # and then get the vector of TF of all of them
 def getAllVectors(XMLpaths):
-    listOfVectors = []
+    listOfVectors = {}
     for xmlfile in XMLpaths:
         tree = ET.parse(xmlfile)
         root = tree.getroot()
         vector = {}
         getVectorWithTF(root, "", vector)
-        listOfVectors.append(vector)
+        listOfVectors[xmlfile] = vector
 
     print("Vectors with only TF")
     pprint(listOfVectors)

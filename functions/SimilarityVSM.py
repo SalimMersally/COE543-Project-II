@@ -33,12 +33,12 @@ def getSimVSM(queryVector, DocumentVector):
 # the following method will get the similarity of the query vector with each document in the
 # list of document provided
 # it will sort them by decreasing order after that
-def getAllSimVSM(queryVector, listOfDocumentVector, XMLPaths):
+def getAllSimVSM(queryVector, listOfDocumentVector):
     simList = []
     i = 0
-    for documentVector in listOfDocumentVector:
-        sim = getSimVSM(queryVector, documentVector)
-        simList.append((XMLPaths[i], sim))
+    for path in listOfDocumentVector:
+        sim = getSimVSM(queryVector, listOfDocumentVector[path])
+        simList.append((path, round(sim, 4)))
         i = i + 1
 
     return sorted(simList, key=lambda tuple: tuple[1], reverse=True)
