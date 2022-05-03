@@ -1,0 +1,16 @@
+<university>
+	LAU
+	<faculty>
+		Ahmad
+		<department>
+			ECE
+			<professor>Joe Tekli</professor>
+			<professor>Wissam Fawaz</professor>
+			<student>Salim Al Ahmad</student>
+			<student>Ahmad Al Sayed Al Sabsabi Ahmad</student>
+		</department>
+		<laboratory>
+			<student>Lamis Armoush</student>
+		</laboratory>
+	</faculty>
+</university>
