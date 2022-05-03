@@ -1,0 +1,14 @@
+<university>
+	<name>American Univeristy of Beirut</name>
+	<shortName>AUB</shortName>
+	<description>
+		AUB is an American university located
+		in Beirut Lebanon. It is one of the leading
+		American universities in Lebanon.
+	</description>
+	<students>
+		<student>Aman Al Masri</student>
+		<student>Jacob Maximus</student>
+		<student >Joe Malik</student>
+	</students>
+</university>
