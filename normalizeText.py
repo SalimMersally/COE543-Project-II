@@ -39,9 +39,7 @@ def normalizeText(text):
         except: 
             lemen.append (word)
     # stem words
-    porter = PorterStemmer()
-    stemmed = [porter.stem(word) for word in lemen]
-    return stemmed
+    return lemen
 
 txt = "LAU is a great university, lau is amazing"
 print(normalizeText(txt))
