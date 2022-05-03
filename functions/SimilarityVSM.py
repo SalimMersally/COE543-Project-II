@@ -1,7 +1,7 @@
 import math
 from pprint import pprint
 
-from pathSimilarity import getSimPath
+from functions.pathSimilarity import getSimPath
 
 
 def getSimVSM(queryVector, DocumentVector):
@@ -27,3 +27,17 @@ def getSimVSM(queryVector, DocumentVector):
         sumVector2 = sumVector2 + DocumentVector[dimension] ** 2
 
     return num / math.sqrt(sumVector1 * sumVector2)
+
+
+# the following method will get the similarity of the query vector with each document in the
+# list of document provided
+# it will sort them by decreasing order after that
+def getAllSimVSM(queryVector, listOfDocumentVector, XMLPaths):
+    simList = []
+    i = 0
+    for documentVector in listOfDocumentVector:
+        sim = getSimVSM(queryVector, documentVector)
+        simList.append((XMLPaths[i], sim))
+        i = i + 1
+
+    return sorted(simList, key=lambda tuple: tuple[1], reverse=True)
