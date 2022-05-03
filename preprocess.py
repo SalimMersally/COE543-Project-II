@@ -1,5 +1,4 @@
 import xml.etree.ElementTree as ET
-import string
 from pprint import pprint
 
 
