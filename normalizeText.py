@@ -26,7 +26,6 @@ def normalizeText(text):
     words = [w for w in words if not w in stop_words]
     #lemantize
     lemen =[]
-
     for word in words:
         try:   
             tmp = wordnet.synsets(word)[0].pos()
