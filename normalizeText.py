@@ -21,11 +21,8 @@ def normalizeText(text):
     # filter out stop words
     stop_words = set(stopwords.words("english"))
     words = [w for w in words if not w in stop_words]
-<<<<<<< Updated upstream
     #lemantize
-    
     lemen =[]
-    
     for word in words:
         tmp = wordnet.synsets(word)[0].pos()
         if (tmp == 'v'):
@@ -44,12 +41,3 @@ def normalizeText(text):
 
 txt = "hello I AM YOUR Horrible nightmare, YOU ARE AFRAID OF a goose I gave you geese!! @# HE HE HE HE"
 print(normalizeText(txt))
-=======
-#return words to origin
-    lemmatizer = WordNetLemmatizer()
-    lemanted = [lemmatizer.lemmatize(word) for word in words]
-#stem words 
-    porter = PorterStemmer()
-    stemmed = [porter.stem(word) for word in lemanted]
-    return stemmed
->>>>>>> Stashed changes
