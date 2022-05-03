@@ -1,28 +1,7 @@
-from copy import deepcopy
 import math
-from mimetypes import suffix_map
 from pprint import pprint
 
 from pathSimilarity import getSimPath
-
-
-weight = [
-    {
-        ("LAU", "/university"): math.log(2),
-        ("ECE", "/university/faculty/department"): math.log(2),
-        ("Joe", "/university/faculty/department/professor"): math.log(2),
-    },
-    {
-        ("LAU", "/university"): 1,
-        ("ECE", "/university/faculty/department"): 1,
-        ("Joe", "/university/faculty/department/professor"): 1,
-    },
-    {
-        ("A", "/university"): 1,
-        ("B", "/university/name"): 1,
-        ("C", "/university/name/at/@"): 1,
-    },
-]
 
 
 def getSimVSM(queryVector, DocumentVector):
@@ -48,7 +27,3 @@ def getSimVSM(queryVector, DocumentVector):
         sumVector2 = sumVector2 + DocumentVector[dimension] ** 2
 
     return num / math.sqrt(sumVector1 * sumVector2)
-
-
-sim = getSimVSM(weight[0], weight[1])
-print(sim)

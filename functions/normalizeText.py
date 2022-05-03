@@ -1,15 +1,17 @@
 import string
 
 import nltk
-nltk.download('punkt')
-nltk.download('wordnet')
-nltk.download('stopwords')
+
+nltk.download("punkt")
+nltk.download("wordnet")
+nltk.download("stopwords")
 
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.corpus import wordnet
 from nltk.stem.porter import PorterStemmer
 from nltk.stem import WordNetLemmatizer
+
 
 def normalizeText(text):
 
@@ -24,22 +26,22 @@ def normalizeText(text):
     # filter out stop words
     stop_words = set(stopwords.words("english"))
     words = [w for w in words if not w in stop_words]
-    #lemantize
-    lemen =[]
+    # lemantize
+    lemen = []
     for word in words:
-        try:   
+        try:
             tmp = wordnet.synsets(word)[0].pos()
-            if (tmp == 'v'):
-                word = WordNetLemmatizer().lemmatize(word,'v')
-            if (tmp == 'a'):
-                word = WordNetLemmatizer().lemmatize(word,'a')
-            if (tmp == 'n'):
-                word = WordNetLemmatizer().lemmatize(word,'n')
-            lemen.append (word)
-        except: 
-            lemen.append (word)
+            if tmp == "v":
+                word = WordNetLemmatizer().lemmatize(word, "v")
+            if tmp == "a":
+                word = WordNetLemmatizer().lemmatize(word, "a")
+            if tmp == "n":
+                word = WordNetLemmatizer().lemmatize(word, "n")
+            if tmp == "r":
+                word = WordNetLemmatizer().lemmatize(word, "r")
+
+            lemen.append(word)
+        except:
+            lemen.append(word)
     # stem words
     return lemen
-
-txt = "LAU is a great university, lau is amazing"
-print(normalizeText(txt))
