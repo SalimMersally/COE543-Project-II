@@ -1,6 +1,9 @@
 import string
 
 import nltk
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('stopwords')
 
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
@@ -23,21 +26,23 @@ def normalizeText(text):
     words = [w for w in words if not w in stop_words]
     #lemantize
     lemen =[]
-    for word in words:
-        tmp = wordnet.synsets(word)[0].pos()
-        if (tmp == 'v'):
-            word = WordNetLemmatizer().lemmatize(word,'v')
-        if (tmp == 'a'):
-            word = WordNetLemmatizer().lemmatize(word,'a')
-        if (tmp == 'n'):
-            word = WordNetLemmatizer().lemmatize(word,'n')
-        else:
-            word = WordNetLemmatizer().lemmatize(word)
-        lemen.append (word)
-    # stem words
-    #porter = PorterStemmer()
-    #stemmed = [porter.stem(word) for word in words]
-    return lemen
 
-txt = "hello I AM YOUR Horrible nightmare, YOU ARE AFRAID OF a goose I gave you geese!! @# HE HE HE HE"
+    for word in words:
+        try:   
+            tmp = wordnet.synsets(word)[0].pos()
+            if (tmp == 'v'):
+                word = WordNetLemmatizer().lemmatize(word,'v')
+            if (tmp == 'a'):
+                word = WordNetLemmatizer().lemmatize(word,'a')
+            if (tmp == 'n'):
+                word = WordNetLemmatizer().lemmatize(word,'n')
+            lemen.append (word)
+        except: 
+            lemen.append (word)
+    # stem words
+    porter = PorterStemmer()
+    stemmed = [porter.stem(word) for word in lemen]
+    return stemmed
+
+txt = "LAU is a great university, lau is amazing"
 print(normalizeText(txt))

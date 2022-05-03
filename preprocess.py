@@ -1,5 +1,6 @@
 import xml.etree.ElementTree as ET
 from pprint import pprint
+from normalizeText import normalizeText
 
 
 def getPaths(root, path, list):
@@ -8,9 +9,7 @@ def getPaths(root, path, list):
     attributeDict = root.attrib
 
     if root.text:
-        wordlist = root.text.translate(
-            str.maketrans(" ", " ", string.punctuation)
-        ).split()
+        wordlist = normalizeText(root.text)
 
         for word in wordlist:
             tuple = (word, path)
