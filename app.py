@@ -13,6 +13,9 @@ XMLpaths = [
     "XMLdocuments/doc2.xml",
     "XMLdocuments/doc3.xml",
     "XMLdocuments/doc4.xml",
+    "XMLdocuments/SampleDoc1.xml",
+    "XMLdocuments/SampleDoc2.xml",
+    "XMLdocuments/SampleLarge.xml",
 ]
 
 vectors = getAllVectors(XMLpaths)
