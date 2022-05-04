@@ -1,0 +1,7 @@
+<food type="fastfood">
+    french fries
+    <description> Although called french fries this food was not initiated in france. However the origin, it became the trendiest meal / side meal all around the world </description>
+    <ingredient> potato </ingredient>
+    <ingredient> oil </ingredient>
+
+</food>

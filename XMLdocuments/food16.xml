@@ -1,0 +1,14 @@
+<food type="fastfood">
+    hamburger
+    <location>found around the world</location>
+    <restaurants> 
+    <restaurant rank ="1"> KFC</restaurant>
+    <restaurant rank ="2"> McDonald</restaurant>
+    <restaurant rank ="3"> Burger King</restaurant>
+    </restaurants>
+    
+    <eat>
+    best eaten on an empty stomach
+    </eat>
+    
+</food>

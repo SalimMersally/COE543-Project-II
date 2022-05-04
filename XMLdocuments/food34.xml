@@ -1,0 +1,9 @@
+<food type="vegetable">
+    potato
+    <description> Potatoes are there since forever all around the world. They used to be famous in soups and boiled with some butter on top. But nw they are especially famous in french fries</description>
+    <colors number = "2">
+        <color>yellowish white</color>
+        <color>brown</color>
+    </colors>
+    
+</food>

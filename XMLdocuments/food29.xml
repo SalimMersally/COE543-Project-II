@@ -1,0 +1,9 @@
+<food type="vegetable">
+    tomato
+    <description>Who doesn't know of tomatoes? cherry tomatoes, normal tomatoes and large tomatoes. Yes, tomatoes are used in almost every meal.</description>
+    <texture>smooth from the outside, very watery from the inside</texture>
+
+        <color>red</color>
+
+    
+</food>

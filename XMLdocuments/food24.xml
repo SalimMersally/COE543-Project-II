@@ -1,0 +1,7 @@
+<food type="fastfood">
+    tacos
+    <location>originated in mexico</location>
+    <ingredient> taco dough </ingredient>
+    <ingredient> filling: can be of meat, veggies, pepper, cheese and different seasonings </ingredient>
+    
+</food>

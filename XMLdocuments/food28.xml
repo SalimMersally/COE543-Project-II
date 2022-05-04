@@ -1,0 +1,12 @@
+<food type="vegetable">
+    tomato
+    <eat>eaten raw with sandwiches</eat>
+    <eat>cooked in many meals</eat>
+    <eat>used as a salad ingredient </eat>
+    <texture>smooth from the outside, very watery from the inside</texture>
+    <colors number = "2">
+        <color>red</color>
+        <color>yellow</color>
+    </colors>
+    
+</food>

@@ -1,0 +1,15 @@
+<food type="fruit">
+    apple
+    <location>found a lot in lebanon</location>
+    <season>winter fruit</season>
+    <texture>hard but smooth on the outside</texture>
+    <eat>
+    Can be eaten raw, or made into an apple pie
+    </eat>
+    <colors number = "3">
+        <color>red</color>
+        <color>yellow</color>
+        <color>green</color>
+    </colors>
+    
+</food>

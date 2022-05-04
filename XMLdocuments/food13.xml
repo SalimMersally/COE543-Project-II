@@ -1,0 +1,16 @@
+<food type="fruit">
+    grape
+    <location>found a lot in lebanon</location>
+    <season>spring fruit</season>
+    <texture>shiny and smooth</texture>
+    <eat>
+    Can be eaten raw, or made into juice, vinegar, or wine 
+    </eat>
+    <colors number = "4">
+        <color>red</color>
+        <color>yellow</color>
+        <color>green</color>
+        <color>purple</color>
+    </colors>
+    
+</food>

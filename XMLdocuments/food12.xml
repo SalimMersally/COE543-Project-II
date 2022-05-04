@@ -1,0 +1,14 @@
+<food type="fruit">
+    orange
+    <location>found a lot in lebanon</location>
+    <season>winter fruit</season>
+    <texture>very juicy</texture>
+    <eat>
+    Can be eaten raw, or made into orange juice
+    </eat>
+    <colors number = "2">
+        <color>orange</color>
+        <color>white</color>
+    </colors>
+    
+</food>

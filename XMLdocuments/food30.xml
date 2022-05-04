@@ -1,0 +1,12 @@
+<food type="vegetable">
+    onion
+    <eat>eaten raw with burgers/pizzas</eat>
+    <eat>cooked in many meals</eat>
+    <eat>used as a salad ingredient </eat>
+    <texture>made of lots and lots of layers</texture>
+    <colors number = "2">
+        <color>white</color>
+        <color>purple</color>
+    </colors>
+    
+</food>

@@ -1,0 +1,9 @@
+<food type="vegetable">
+    garlic
+    <description>Though smelly and triggers a bad breath, garlic adds an incredible spicy taste to food. Today, it is always used everywhere and in almost every meal.</description>
+    <colors number = "2">
+        <color>yellowish white</color>
+        <color>purple</color>
+    </colors>
+    
+</food>

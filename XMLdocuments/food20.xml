@@ -1,0 +1,15 @@
+<food type="fastfood">
+    pizza
+    <location>found around the world</location>
+    <types>
+    <type>chicken barbeque</type>
+    <type>pepperoni</type>
+    <type>normal</type>
+    <type>veggie</type>
+    </types>
+    
+    <additives>
+    pinapple, tomato, chicken, bbq sauce, cheese
+    </additives>
+    
+</food>

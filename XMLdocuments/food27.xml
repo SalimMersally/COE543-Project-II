@@ -1,0 +1,10 @@
+<food type="vegetable">
+    cucumber
+   <description> a very famous vegetable all around the world. Used in salads, as a side snack, transformed to pickles and used in almost all fast foods you might think of including hamburgers, chicken burgers and sandwiches, ...</description>
+    <texture>rough from the outside, very watery from the inside</texture>
+    <colors number = "2">
+        <color>dark green</color>
+        <color>greenish yellow</color>
+    </colors>
+    
+</food>

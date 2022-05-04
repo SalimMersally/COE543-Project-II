@@ -1,0 +1,14 @@
+<food type="citrus fruit">
+    lemon
+    <season>winter fruit</season>
+    <eat>
+  used with everything to enhance taste
+    </eat>
+    <colors number = "2">
+     
+        <color>yellow</color>
+        <color>green</color>
+
+    </colors>
+    
+</food>

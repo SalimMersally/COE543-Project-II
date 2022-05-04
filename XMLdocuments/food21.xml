@@ -1,0 +1,9 @@
+<food type="fastfood">
+    pizza
+    <description> Pizzas are the traditional food in italy, there no ketchup is allowed as a topping</description>
+    
+    <eat>
+    using your hands, might as well using a knife and fork
+    </eat>
+    
+</food>

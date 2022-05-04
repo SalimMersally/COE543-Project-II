@@ -1,0 +1,15 @@
+<food type="fastfood">
+    hamburger
+    <location>found around the world</location>
+    <types>
+    <type>chicken</type>
+    <type>beef</type>
+    <type>pork</type>
+    <type>veggie</type>
+    </types>
+    
+    <eat>
+    best eaten on an empty stomach
+    </eat>
+    
+</food>

@@ -1,0 +1,13 @@
+<food type="fruit">
+    strawberry
+    <season>summer exotic fruit</season>
+    <taste>sweet and savory</taste>
+    <eat>
+    Can be eaten raw, or made into an strawberry pie, cheese cake...
+    </eat>
+
+        <color>red</color>
+
+
+    
+</food>

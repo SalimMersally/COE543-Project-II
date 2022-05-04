@@ -1,0 +1,11 @@
+<food type="fastfood">
+    french fries
+    <location>found around the world</location>
+    <ingredient> potato </ingredient>
+    <ingredient> oil </ingredient>
+    
+    <eat>
+    good as a snack with all types of foods, can be also wrapped in a delicious sandwich 
+    </eat>
+    
+</food>

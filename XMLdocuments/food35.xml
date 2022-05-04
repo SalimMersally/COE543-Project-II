@@ -1,0 +1,11 @@
+<food type="vegetable">
+    carrots
+    <eat>eaten raw</eat>
+    <eat>eaten boiled/fried</eat>
+    <eat>as a part of many meals especially soups </eat>
+
+    <color>orange</color>
+
+
+    
+</food>

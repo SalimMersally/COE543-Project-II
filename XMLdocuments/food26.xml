@@ -1,0 +1,12 @@
+<food type="vegetable">
+    cucumber
+    <eat>eaten raw with sandwiches</eat>
+    <eat>transformed into pickles</eat>
+    <eat>used as a salad ingredient </eat>
+    <texture>rough from the outside, very watery from the inside</texture>
+    <colors number = "2">
+        <color>dark green</color>
+        <color>greenish yellow</color>
+    </colors>
+    
+</food>

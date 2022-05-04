@@ -1,0 +1,11 @@
+<food type="vegetable">
+    garlic
+    <eat>eaten raw with sandwiches</eat>
+    <eat>transformed into seasonings</eat>
+    <eat>cooked in meals </eat>
+    <colors number = "2">
+        <color>yellowish white</color>
+        <color>purple</color>
+    </colors>
+    
+</food>
