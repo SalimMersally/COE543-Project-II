@@ -10,7 +10,9 @@
     <ul>
       {% for item in queryResult %}
       <li>
-        <a href="{{item[0]}}" target="_blank">Document {{loop.index}}</a>
+        <a href="{{item[0]}}" target="_blank"
+          >Result {{loop.index}}: {{item[0][13:]}}</a
+        >
         <p>Similarity: {{item[1]}}</p>
       </li>
       {% endfor %}

@@ -1,3 +1,4 @@
+from glob import escape
 import time
 import xml.etree.ElementTree as ET
 from flask import Flask, render_template, request, Response
@@ -102,33 +103,9 @@ def main():
     return render_template("index.html")
 
 
-@app.route("/XMLdocuments/doc1.xml")
-def getDoc1():
-    tree = ET.parse(XMLpaths[0])
-    root = tree.getroot()
-    xmlstr = ET.tostring(root, encoding="utf8", method="xml")
-    return Response(xmlstr, mimetype="text/xml")
-
-
-@app.route("/XMLdocuments/doc2.xml")
-def getDoc2():
-    tree = ET.parse(XMLpaths[1])
-    root = tree.getroot()
-    xmlstr = ET.tostring(root, encoding="utf8", method="xml")
-    return Response(xmlstr, mimetype="text/xml")
-
-
-@app.route("/XMLdocuments/doc3.xml")
-def getDoc3():
-    tree = ET.parse(XMLpaths[2])
-    root = tree.getroot()
-    xmlstr = ET.tostring(root, encoding="utf8", method="xml")
-    return Response(xmlstr, mimetype="text/xml")
-
-
-@app.route("/XMLdocuments/doc4.xml")
-def getDoc4():
-    tree = ET.parse(XMLpaths[3])
+@app.route("/<folder>/<doc>")
+def getDoc1(folder, doc):
+    tree = ET.parse(folder + "/" + doc)
     root = tree.getroot()
     xmlstr = ET.tostring(root, encoding="utf8", method="xml")
     return Response(xmlstr, mimetype="text/xml")
