@@ -19,7 +19,7 @@ def getVectorWithTF(root, path, vector):
     path = path + "/" + root.tag
     attributeDict = root.attrib
 
-# handling the tags 
+    # handling the tags
     tagPath = path + "/#"
     wordlist = normalizeText(root.tag)
     for word in wordlist:
@@ -28,8 +28,8 @@ def getVectorWithTF(root, path, vector):
             vector[dimension] = vector[dimension] + 1
         else:
             vector[dimension] = 1
-        
-#handling the text    
+
+    # handling the text
     if root.text:
         wordlist = normalizeText(root.text)
         for word in wordlist:
@@ -38,8 +38,8 @@ def getVectorWithTF(root, path, vector):
                 vector[dimension] = vector[dimension] + 1
             else:
                 vector[dimension] = 1
-                
-#handling the attribute   
+
+    # handling the attribute
     for att in attributeDict:
         attributePath = path + "/" + att + "/@"
         wordlist = normalizeText(attributeDict[att])
