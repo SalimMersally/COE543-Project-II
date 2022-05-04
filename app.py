@@ -1,4 +1,3 @@
-from glob import escape
 import time
 import xml.etree.ElementTree as ET
 from flask import Flask, render_template, request, Response
@@ -112,8 +111,6 @@ for path in XMLpaths1:
     root = tree.getroot()
     roots.append(root)
 
-queryResult = []
-
 
 @app.route("/", methods=("GET", "POST"))
 def main():
@@ -148,7 +145,6 @@ def main():
 
         return render_template("result.html", queryResult=queryResult, time=timeTaken)
 
-    print(request)
     return render_template("index.html")
 
 
