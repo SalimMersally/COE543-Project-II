@@ -51,6 +51,9 @@ XMLpaths = [
     "XMLdocuments/food34.xml",
     "XMLdocuments/food35.xml",
     "XMLdocuments/food36.xml",
+    "XMLdocuments/city1.xml",
+    "XMLdocuments/city2.xml",
+    "XMLdocuments/city3.xml",
 ]
 
 vectors = getAllVectors(XMLpaths)
