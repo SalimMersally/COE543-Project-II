@@ -1,0 +1,10 @@
+<food type="fruit">
+    pineapple 
+    <season>summer fruit</season>
+    <colors number = "3">
+        <color>brown</color>
+        <color>yellow</color>
+        <color>green</color>
+    <colors>
+    
+</food>

@@ -1,0 +1,17 @@
+<food type="fruit">
+    pineapple 
+    <location>exotic places and climates</location>
+    <season>summer fruit</season>
+    <texture>rough from the outside</texture>
+    <eat>
+    <how2eat step= "1">peal</how2eat>
+    <how2eat step="2">cut into round or square pieces</how2eat>
+    <how2eat step="3">you can cook it on pizza or use it on sweets like cake</how2eat>
+    </eat>
+    <colors number = "3">
+        <color>brown</color>
+        <color>yellow</color>
+        <color>green</color>
+    <colors>
+    
+</food>
