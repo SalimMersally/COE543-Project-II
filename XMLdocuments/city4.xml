@@ -1,0 +1,15 @@
+<city type="Cairo">
+
+    <location>Egypt</location>
+    <about> is the capital of Egypt and the largest city in the Arab world</about>
+    <Hotels number = "3">
+    <hotel rate= "3 stars" loc = "Giza">Comfort Pyramids inn</hotel>
+    <hotel rate= "NA" loc = "DownTown">Madina Hostel</hotel>
+    <hotel rate= "NA" loc = "Giza">Elite Pyramids Boutique Hotel</hotel>
+    </Hotels>
+    <places number = "2">
+        <place type="Historical place"> Giza Pyramids</place>
+        <place type="Historical place" >Sphinx, Memphis</place>
+    </places>
+    
+</city>
