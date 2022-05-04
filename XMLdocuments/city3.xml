@@ -1,0 +1,16 @@
+<city type="Barcelona">
+
+    <location>Spain</location>
+    
+    <about>the capital and largest city of the autonomous community of Catalonia, as well as the second most populous municipality of Spain</about>
+    <Hotels number = "2">
+    <hotel rate= "4 stars" loc = "Saint Marti">Barcelona Princess </hotel>
+    <hotel rate= "4 stars" loc = "Saint Marti">Catalonia Atenas </hotel>
+
+    </Hotels>
+    <places number = "2">
+        <place type="Football Stadium">Camp Nou</place>
+        <place type="Historical Cathedral">Sagrada Família</place>
+    </places>
+    
+</city>

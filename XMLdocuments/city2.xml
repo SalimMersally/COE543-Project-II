@@ -1,0 +1,16 @@
+<city type="Granada">
+
+    <location>Spain</location>
+    
+    <about>the capital city of the province of Granada, in the autonomous community of Andalusia, Spain</about>
+    <Hotels number = "3">
+    <hotel rate= "4 stars" loc = "Zaidin">hotel Saray</hotel>
+    <hotel rate= "4 stars" loc = "City Center">Hotel Granada Center</hotel>
+    <hotel rate= "4 stars" loc = "City Center">Porcel Alixares</hotel>
+    </Hotels>
+    <places number = "2">
+        <place type="Historical Palace">Nasrid Palaces</place>
+        <place type="Historical Palace">The Alhambra citadel of Granada</place>
+    </places>
+    
+</city>
