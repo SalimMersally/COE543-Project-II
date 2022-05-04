@@ -1,0 +1,11 @@
+<food type="vegetable">
+    potato
+    <eat>eaten boiled</eat>
+    <eat>eaten fried</eat>
+    <eat>as a side dish </eat>
+    <colors number = "2">
+        <color>yellowish white</color>
+        <color>brown</color>
+    </colors>
+    
+</food>
