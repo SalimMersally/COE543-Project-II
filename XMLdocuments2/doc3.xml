@@ -1,0 +1,98 @@
+<root>
+	<university>
+		<name>American Univeristy of Beirut</name>
+		<shortName>AUB</shortName>
+		<description>
+		AUB is an American university located
+		in Beirut Lebanon.
+	</description>
+		<students>
+			<student id="2020">Aman</student>
+			<student id="2021">Lamis</student>
+		</students>
+	</university>
+	<university>
+		<name>American Univeristy of Beirut</name>
+		<shortName>AUB</shortName>
+		<description>
+		AUB is an American university located
+		in Beirut Lebanon.
+	</description>
+		<students>
+			<student id="2020">Aman</student>
+			<student id="2021">Lamis</student>
+		</students>
+	</university>
+	<university>
+		<name>American Univeristy of Beirut</name>
+		<shortName>AUB</shortName>
+		<description>
+		AUB is an American university located
+		in Beirut Lebanon.
+	</description>
+		<students>
+			<student id="2020">Aman</student>
+			<student id="2021">Lamis</student>
+		</students>
+	</university>
+	<university>
+		<name>American Univeristy of Beirut</name>
+		<shortName>AUB</shortName>
+		<description>
+		AUB is an American university located
+		in Beirut Lebanon.
+	</description>
+		<students>
+			<student id="2020">Aman</student>
+			<student id="2021">Lamis</student>
+		</students>
+	</university>
+	<university>
+		<name>American Univeristy of Beirut</name>
+		<shortName>AUB</shortName>
+		<description>
+		AUB is an American university located
+		in Beirut Lebanon.
+	</description>
+		<students>
+			<student id="2020">Aman</student>
+			<student id="2021">Lamis</student>
+		</students>
+	</university>
+	<university>
+		<name>American Univeristy of Beirut</name>
+		<shortName>AUB</shortName>
+		<description>
+		AUB is an American university located
+		in Beirut Lebanon.
+	</description>
+		<students>
+			<student id="2020">Aman</student>
+			<student id="2021">Lamis</student>
+		</students>
+	</university>
+	<university>
+		<name>American Univeristy of Beirut</name>
+		<shortName>AUB</shortName>
+		<description>
+		AUB is an American university located
+		in Beirut Lebanon.
+	</description>
+		<students>
+			<student id="2020">Aman</student>
+			<student id="2021">Lamis</student>
+		</students>
+	</university>
+	<university>
+		<name>American Univeristy of Beirut</name>
+		<shortName>AUB</shortName>
+		<description>
+		AUB is an American university located
+		in Beirut Lebanon.
+	</description>
+		<students>
+			<student id="2020">Aman</student>
+			<student id="2021">Lamis</student>
+		</students>
+	</university>
+</root>

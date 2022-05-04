@@ -1,0 +1,113 @@
+<root>
+	<university>
+		LAU
+		<faculty>
+			<department>
+				ECE
+				<professor>Joe Tekli</professor>
+				<professor>Wissam Fawaz</professor>
+				<student>Salim Al Mersally</student>
+				<student>Ahmad Al Sayed Al Sabsabi</student>
+				<laboratory>
+					<student>Lamis Armoush</student>
+				</laboratory>
+			</department>
+		</faculty>
+	</university>
+	<university>
+		LAU
+		<faculty>
+			<department>
+				ECE
+				
+			</department>
+			<laboratory>
+				<student>
+					Lamis Armoush
+					<professor>Joe Tekli</professor>
+					<professor>Wissam Fawaz</professor>
+					<student>Salim Al Mersally</student>
+					<student>Ahmad Al Sayed Al Sabsabi</student>
+				</student>
+			</laboratory>
+		</faculty>
+	</university>
+	<university>
+		LAU
+		<faculty>
+			<student>Salim Al Mersally</student>
+			<student>Ahmad Al Sayed Al Sabsabi</student>
+			<department>
+				ECE
+				<professor>Joe Tekli</professor>
+				<professor>Wissam Fawaz</professor>
+
+			</department>
+			<laboratory>
+				<student>Lamis Armoush</student>
+			</laboratory>
+		</faculty>
+	</university>
+	<university>
+		LAU
+		<faculty>
+			<department>
+				ECE
+				
+			</department>
+			<laboratory>
+				<student>Lamis Armoush</student>
+			</laboratory>
+		</faculty>
+	</university>
+	<university>
+		LAU
+		<faculty>
+			<department>
+				ECE
+				<professor>Joe Tekli</professor>
+				<professor>Wissam Fawaz</professor>
+				<student>Salim Al Mersally</student>
+				<student>Ahmad Al Sayed Al Sabsabi</student>
+				<professor>Joe Tekli</professor>
+				<professor>Wissam Fawaz</professor>
+				<student>Salim Al Mersally</student>
+				<student>Ahmad Al Sayed Al Sabsabi</student>
+			</department>
+			<laboratory>
+				<student>Lamis Armoush</student>
+			</laboratory>
+		</faculty>
+	</university>
+	<university>
+		LAU
+		<faculty>
+			<department>
+				ECE
+				<professor>Joe Tekli</professor>
+				<professor>Wissam Fawaz</professor>
+				<student>Salim Al Mersally</student>
+				<student>Ahmad Al Sayed Al Sabsabi</student>
+			</department>
+			<laboratory>
+				<student>Lamis Armoush</student>
+			</laboratory>
+		</faculty>
+		<university>
+			LAU
+			<faculty>
+				<department>
+					ECE
+					<professor>Joe Tekli</professor>
+					<professor>Wissam Fawaz</professor>
+					<student>Salim Al Mersally</student>
+					<student>Ahmad Al Sayed Al Sabsabi</student>
+				</department>
+				<laboratory>
+					<student>Lamis Armoush</student>
+				</laboratory>
+			</faculty>
+		</university>
+	</university>
+
+</root>

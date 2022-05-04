@@ -99,6 +99,7 @@ def IDF(listOfVectors):
 def getAllVectors(XMLpaths):
     listOfVectors = {}
     for xmlfile in XMLpaths:
+        print(xmlfile)
         tree = ET.parse(xmlfile)
         root = tree.getroot()
         vector = {}
