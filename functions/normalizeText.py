@@ -43,5 +43,5 @@ def normalizeText(text):
             lemen.append(word)
         except:
             lemen.append(word)
-    # stem words
+
     return lemen
