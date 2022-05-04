@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 import math
 from pprint import pprint
-from functions.normalizeText import normalizeText
+from functions.normalizeText import *
 
 # Wd(ti) = TF(ti, D) * IDF(ti, C)
 # TF = frequency
@@ -19,16 +19,27 @@ def getVectorWithTF(root, path, vector):
     path = path + "/" + root.tag
     attributeDict = root.attrib
 
+# handling the tags 
+    tagPath = path + "/#"
+    wordlist = normalizeText(root.tag)
+    for word in wordlist:
+        dimension = (word, tagPath)
+        if dimension in vector:
+            vector[dimension] = vector[dimension] + 1
+        else:
+            vector[dimension] = 1
+        
+#handling the text    
     if root.text:
         wordlist = normalizeText(root.text)
-
         for word in wordlist:
             dimension = (word, path)
             if dimension in vector:
                 vector[dimension] = vector[dimension] + 1
             else:
                 vector[dimension] = 1
-
+                
+#handling the attribute   
     for att in attributeDict:
         attributePath = path + "/" + att + "/@"
         wordlist = normalizeText(attributeDict[att])

@@ -5,6 +5,7 @@ from functions.Vectors import *
 from functions.SimilarityVSM import *
 from functions.TreeEditDistance import *
 from functions.indexing import *
+from functions.normalizeText import *
 
 app = Flask(__name__)
 
