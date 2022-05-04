@@ -20,7 +20,7 @@ def getVectorWithTF(root, path, vector):
     attributeDict = root.attrib
 
     # handling the tags
-    tagPath = path + "/#"
+    tagPath = path
     wordlist = normalizeText(root.tag)
     for word in wordlist:
         dimension = (word, tagPath)
@@ -31,9 +31,10 @@ def getVectorWithTF(root, path, vector):
 
     # handling the text
     if root.text:
+        wordPath = path + "/#"
         wordlist = normalizeText(root.text)
         for word in wordlist:
-            dimension = (word, path)
+            dimension = (word, wordPath)
             if dimension in vector:
                 vector[dimension] = vector[dimension] + 1
             else:
